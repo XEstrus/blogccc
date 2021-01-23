@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
     <%- include('head',{}); %>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <!-- <link rel='stylesheet' href='/stylesheets/style.css' /> -->
     <title>Document</title>
     
 </head>
 <body>
     <div class="layui-container">  
         <div class="layui-row">
-          <form action="layui-form" action="">
+          <form  action="/users/addUser" method="POST">
               <div class="layui-form-item">
                   <label class="layui-form-label">用户名</label>
                   <div class="layui-input-block">
-                      <input type="text" name="title" required placeholder="请输入用户名" class="layui-input">
+                      <input type="text" name="userName" required placeholder="请输入用户名" class="layui-input">
                   </div>
               </div>
               <div class="layui-form-item">
                   <label class="layui-form-label">密码</label>
                   <div class="layui-input-block">
-                      <input type="password" name="title" required placeholder="请输入密码" class="layui-input">
+                      <input type="password" name="password" required placeholder="请输入密码" class="layui-input">
                   </div>
               </div>
               <div class="layui-form-item">
-                <label class="layui-form-label">密码</label>
+                <label class="layui-form-label">确认密码</label>
                 <div class="layui-input-block">
-                    <input type="password" name="title" required placeholder="请确认密码" class="layui-input">
+                    <input type="password" name="passwordC" required placeholder="请确认密码" class="layui-input">
                 </div>
             </div>
               <div class="layui-form-item">
@@ -35,7 +35,7 @@
             </div>
             <div class="layui-form-item">
                 <div class="layui-p">
-                    <p>注册成功，<a href="./login">立即登录</a>！</p>
+                    <p>已有账号，<a href="./login">立即登录</a>！</p>
                 </div>
             </div>
           </form>

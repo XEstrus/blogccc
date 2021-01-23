@@ -1,20 +1,80 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <!-- <title><%= title %></title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <link rel='stylesheet' href='/libs/layui/css/layui.css' />
+    <link rel='stylesheet' href='/libs/layui/css/layui.css' /> -->
+    <%- include('head',{}); %>
   </head>
   <body>
-    <h1><%= title %></h1>
+    <!-- <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <h1>0k</h1>
     <button type="button" class="layui-btn">一个标准按钮</button>
-    <a href="http://www.layui.com" class="layui-btn">一个可跳转的按钮</a>
+    <a href="http://www.layui.com" class="layui-btn">一个可跳转的按钮</a> -->
 
     <!-- <div class="layui-btn-container">
       <button type="button" class="layui-btn">标准按钮</button>
       <button type="button" class="layui-btn">可跳转按钮</button>
     </div> -->
+    <div class="layui-form-item">
+      <div class="layui-input-wirte">
+          <ul class="layui-nav layui-bg-green">
+              <i class="layui-icon layui-icon-home" style="font-size: 30px;"><a href="./index"></a></i>
+              <li class="layui-nav-item layui-this"><a href="./write">写文章</a></li>
+              <li class="layui-nav-item layui-tui"><a href="./details">退出</a></li>
+            </ul>
+      </div>
+  </div>
+    <table class="layui-table" lay-skin="line">
+      <colgroup>
+        <col width="150">
+        <col width="200">
+        <col>
+      </colgroup>
+      <thead>
+        <tr>
+          <th>序</th>
+          <th>新增资讯</th>
+          <th>加入时间</th>
+          <th>操作</th>
+        </tr> 
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>
+            <a  href="/details">今日热搜榜单</a>
+          </td>
+          <td>2020-09-21</td>
+          <td>
+            <div class="layui-btn-group">
+              <a href="/write">
+              <button type="button" class="layui-btn">编辑</button></a>
+              <a href="/write">
+              <button type="button" class="layui-btn">删除</button>
+            </a>
+            </div>
+          </td>
+          <hr class="layui-bg-blue">
+        </tr>
+        
+    
+        <tr>
+          <td>2</td>
+          <td>
+            <a href="/details">最新资讯XXX</a>
+          </td>
+          <td>2020-09-21</td>
+          <td>
+            <div class="layui-btn-group">
+              
+              <button type="button" class="layui-btn">编辑</button>
+              <button type="button" class="layui-btn">删除</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
